@@ -1,0 +1,18 @@
+{
+    "1": {
+        "speaker_name": " Megha Sharma",
+        "topic_name" : "Optimizations in Web Development: Journey from a college project to a product using Django",
+        "date" : "26 Jun, 2018",
+        "Description" : "There lies a huge gap between a website made as a hobby/college project and that made for professional purposes. The journey to cross this is marked through database optimizations, consistent look and feel, efficient cache layer and many other things! My talk is going to be about highlighting the flexibility and power python gives in this case. I'm going to share my experience of building a tool for Wikipedia under Outreachy Round 15 (https://www.outreachy.org/).",
+        "Prerequisites" : "Basic knowledge of Python, Django, Javascript and querying RDBMS is required.",
+        "Content URLs" : "Slides will be uploaded soon Github Repository: https://github.com/MeghaSharma21/WikiCV Project details: https://phabricator.wikimedia.org/T178688        Link to the tool: https://tools.wmflabs.org/outreachy-wikicv/wiki-cv/",
+        "Speaker Info": "I'm a final year student pursuing B.Tech from Punjab Engineering College. College made me fall in love with coding and after that there has been no looking back. I've been an Outreachy (https://www.outreachy.org/) intern and currently a part of Google Summer of Code. When it comes to the open source world, I'm a regular contributor in Wikimedia. Other than coding, I love reading, writing and trying out new things.",
+        "Speaker Links": ["Blog: https://medium.com/@meghasharma4910", "Github: https://github.com/MeghaSharma21","Outreachy project: https://github.com/MeghaSharma21/WikiCV", "Google Summer of Code project: https://github.com/MeghaSharma21/WorklistTool-GSoC-2018"],
+        "Section" :"Web development",
+        "Type" : "Talks",
+        "Target Audience" :"Beginner",
+        "Last Updated" : 	"27 Jun, 2018"
+        
+    }
+    
+}
