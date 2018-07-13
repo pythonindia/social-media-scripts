@@ -7,22 +7,19 @@ class CrawlerSpider(scrapy.Spider):
     name = 'crawler'
     allowed_domains = ['in.pycon.org']
     url = "https://in.pycon.org"
-    proposals = {}
+    proposals = []
     file = open("proposals.json", "w")
     def start_requests(self):
         yield scrapy.Request(self.url + "/cfp/2018/proposals", callback = self.parse)
 
     def parse(self, response):
         proposal_links = response.xpath("//h3[@class='proposal--title']/a/@href").extract()
-        index = 1
         for link in proposal_links:
-            yield scrapy.Request(self.url + link, callback = self.parseProposal, meta = {"number" : index})
-            index += 1
+            yield scrapy.Request(self.url + link, callback = self.parseProposal)
+        
         
         
     def parseProposal(self, response):
-        index = response.meta.get("number")
-
         title = response.xpath("//h1[@class='proposal-title']/text()").extract()[0].strip()
         author = response.xpath("//p[@class='text-muted']/small/b/text()").extract()[0].strip()
         created_on = response.xpath("//p[@class='text-muted']/small/b/time/text()").extract()[0].strip()
@@ -47,7 +44,7 @@ class CrawlerSpider(scrapy.Spider):
         some_dic["created_on"] = created_on
         some_dic["Last Updated"] = response.xpath("//time/text()").extract()[0]
 
-        self.proposals[index] = some_dic
+        self.proposals.append(some_dic)
                 
     def format_data(self, data, head):
         return " ".join([d.strip() for d in data if d != "" and d!=head ])
