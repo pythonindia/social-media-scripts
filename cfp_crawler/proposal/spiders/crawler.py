@@ -3,6 +3,7 @@ import scrapy
 import json
 from scrapy import signals
 
+
 class CrawlerSpider(scrapy.Spider):
     name = 'crawler'
     allowed_domains = ['in.pycon.org']
