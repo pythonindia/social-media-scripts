@@ -26,26 +26,26 @@ class CrawlerSpider(scrapy.Spider):
         created_on = response.xpath("//p[@class='text-muted']/small/b/time/text()").extract()[0].strip()
 
         section = response.xpath("//section[@class='col-sm-8 proposal-writeup']/div")
-        some_dic = {}
+        proposal = {}
         for div in section:
             heading = div.xpath(".//h4[@class='heading']/b/text()").extract()[0]
             data = self.format_data(div.xpath(".//text()").extract(), heading)
             data = data[2:-2]
-            some_dic[heading[:-1]] = data
+            proposal[heading[:-1]] = data
         
-        table = response.xpath("//table/tr")
-        for col in table:
-            heading = col.xpath(".//td/small/text()").extract()[0].strip()
-            data = col.xpath(".//td/text()").extract()[0].strip()
-            some_dic[heading[:-1]] = data
+        table_rows = response.xpath("//table/tr")
+        for row in table_rows:
+            extra_info_heading = row.xpath(".//td/small/text()").extract()[0].strip()
+            extra_info_content = row.xpath(".//td/text()").extract()[0].strip()
+            proposal[extra_info_heading[:-1]] = extra_info_content
         
-        some_dic["title"] = title
-        some_dic["link_to_proposal"] = response.request.url
-        some_dic["author"] = author
-        some_dic["created_on"] = created_on
-        some_dic["Last Updated"] = response.xpath("//time/text()").extract()[0]
+        proposal["title"] = title
+        proposal["link_to_proposal"] = response.request.url
+        proposal["author"] = author
+        proposal["created_on"] = created_on
+        proposal["Last Updated"] = response.xpath("//time/text()").extract()[0]
 
-        self.proposals.append(some_dic)
+        self.proposals.append(proposal)
                 
     def format_data(self, data, head):
         return " ".join([d.strip() for d in data if d != "" and d!=head ])
