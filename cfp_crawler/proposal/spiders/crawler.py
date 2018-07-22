@@ -59,6 +59,7 @@ class CrawlerSpider(scrapy.Spider):
     def spider_closed(self, spider):
         print("Closing spider")
         json.dump(self.proposals, self.file, indent = 2, sort_keys = True)
+        self.file.close()
         
         
   
