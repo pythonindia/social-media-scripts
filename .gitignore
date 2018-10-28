@@ -1,0 +1,6 @@
+sendgrid.env
+*.log
+*.pdf
+*.log
+.vscode
+*.pyc
