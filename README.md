@@ -5,7 +5,7 @@ Every year in PyCon India we need to automate a lot of stuff specially for Socia
 It contains the following scripts
 
 1. [PyCon India Twitter bot](inpycon-twitterbot)
-2. Emailer (TBD)
+2. [Emailer](pycon-emailer)
 3. Scraper for CFP (TBD)
 
 ## Contributing
