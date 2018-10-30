@@ -31,7 +31,8 @@ reset=$'\033[0m' # Reset Text
 bold=$'\033[1m' # Bold Text
 underline=$'\033[4m' # Underline Text
 
-dest_date="2005-10-18
+# Set the following date to that for PyCon India 2019
+dest_date="2019-10-06"
 diff=$(( ($(date '+%s' -d "$dest_date") - $(date '+%s')) / 86400))
 
 echo "There are ${bold}$diff${reset} days to go for ${bold}${underline}in.PyCon.org${reset}"
