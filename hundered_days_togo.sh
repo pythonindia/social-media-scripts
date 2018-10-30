@@ -35,6 +35,6 @@ underline=$'\033[4m' # Underline Text
 dest_date="2019-10-06"
 diff=$(( ($(date '+%s' -d "$dest_date") - $(date '+%s')) / 86400))
 
-echo "There are ${bold}$diff${reset} days to go for ${bold}${underline}in.PyCon.org${reset}"
+echo "There are ${bold}$diff${reset} days to go for ${bold}${underline}PyCon India 2019!${reset}"
 
 # TODO : add support for colors and decoration
