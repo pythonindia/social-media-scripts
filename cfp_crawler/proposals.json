@@ -1,0 +1,16 @@
+[
+  {
+    "Description": "Vyper is a recently launched python based smart contract programming language. The talk will focus on the features and benefits of Vyper and compare it to Solidity which is similar to Javascript and will include brief demos comparing smart contract implementations.\nTopics to be covered:   Features of Vyper and their comparisons to solidity  Design pattern of smart contracts  Creating smart contracts : demos in both languages", 
+    "Last Updated": "10 Jul, 2018", 
+    "Prerequisites": "Basic knowledge about Blockchain and the Ethereum ecosystem would be helpful", 
+    "Section": "Others", 
+    "Speaker Info": "The speaker is currently working as a research associate at IIIT Delhi and has worked on the Ethereum blockchain  as smart contract developer  building decentralised applications and web3js based frontends for these applications", 
+    "Speaker Links": "You can reach me at :  https://aerophile.github.io  https://twitter.com/shubham0075_", 
+    "Target Audience": "Intermediate", 
+    "Type": "Talks", 
+    "author": "Shubham Gupta (~shubham98)", 
+    "created_on": "10 Jul, 2018", 
+    "link_to_proposal": "https://in.pycon.org/cfp/2018/proposals/vyper-vs-solidity-smart-contracts-in-the-python-ecosystem~bok3b/", 
+    "title": "Vyper vs Solidity: Smart contracts in the Python ecosystem"
+  }
+]
